@@ -1,0 +1,7 @@
+Consultas MYSQL
+
+Consultar producto con mayor stock
+SELECT * FROM `producto` WHERE Stock = (SELECT MAX( Stock )  FROM `producto`)
+
+Consultar producto más vendido
+SELECT idProducto, COUNT(idProducto) FROM detalle_ventas GROUP BY IdProducto;
